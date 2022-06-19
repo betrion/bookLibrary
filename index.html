@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/toggle.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    <script src="scripts/app.js" type="module"></script>
+    <title>Library App</title>
+  </head>
+  <body>
+    <header>
+      <h1>Library App</h1>
+      <h6>(with storage).</h6>
+    </header>
+    <div class="nav">
+      <nav>
+        <p>Order By:</p>
+        <form action="#" method="get" id="order" class="order">
+          <select name="orderSelect" id="orderSelect">
+            <option value="dateAdded">Date added</option>
+            <option value="datePublished">Book Published</option>
+          </select>
+        </form>
+        <aside>
+          <div class="log">
+            <h3>Books collection:</h3>
+            <ol>
+              <li>
+                Total count:
+                <span class="booksCount">3</span>
+              </li>
+              <li>
+                Read:
+                <span class="booksRead">1</span>
+              </li>
+              <li>
+                Not Read:
+                <span class="booksNotRead">2</span>
+              </li>
+            </ol>
+          </div>
+        </aside>
+      </nav>
+    </div>
+    <div class="booksGrid">
+      <div class="book" >
+        <header>
+          <h4>Harry Potter</h4>
+          <button class="close">
+            <img src="icons/close.svg" alt="" srcset="" />
+          </button>
+        </header>
+        <p>by J.K Rowling</p>
+        <p>Released in 1996</p>
+        <p>Have read it?
+        <label class="switch" id="s">
+         <input type="checkbox" class="checker">
+         <span class="slider round"></span></p>
+</label>
+      </div>
+      <div class="book ">2</div>
+      <div class="book">3</div>
+      <div class="book">4</div>
+      <div class="book">5</div>
+      <div class="book">6</div>
+    </div>
+    <button class="add">
+      <img
+        src="icons/add_circle_FILL0_wght400_GRAD0_opsz48.svg"
+        alt="Add Book"
+        srcset=""
+      />
+    </button>
+
+    <!-- The Modal -->
+    <div id="addBooks" class="modalBooks">
+      <!-- Modal content -->
+      <div class="modalContent">
+        <span class="closeModal">&times;</span>
+        <form action="#" method="get">
+        <input type="text" name="bookName" id="bookName" placeholder="book name..." autocomplete="off">
+        <label for="bookName" >Book name</label>
+        <input type="text" name="bookArtist" id="bookArtist" placeholder="artist's name..." autocomplete="off">
+        <label for="bookArtist">Artist</label>
+        <input type="number" name="year" id="year" placeholder="year released..
+        ">
+        <label for="year">Year released</label>
+        <br>
+        <input type="checkbox" name="haveRead" id="haveRead">
+        <label for="haveRead">Have read it?</label>
+        <br>
+        <input type="submit" value="submit">
+      </form></div>
+      </div>
+
+    </div>
+    <footer>
+      Made by Dean
+      <a href="http://github.com/betrion">
+        <img src="icons/iconmonstr-github-1.svg" alt="github logo"
+        class="githublogo"
+      </a>
+    </footer>
+  </body>
+</html>
