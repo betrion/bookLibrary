@@ -163,7 +163,7 @@ ol {
 .booksGrid header {
   display: flex;
 }
-.close {
+.deleteBook {
   flex-grow: 0;
   outline: none;
   /* background-color: rgba(204, 204, 204, 0); */
@@ -172,12 +172,23 @@ ol {
   margin: 0;
   cursor: pointer;
 }
-.close img {
+.deleteBook img {
   background-color: rgba(204, 204, 204, 0);
   width: 25px;
   height: 20px;
 }
 .readBook {
+  color: whitesmoke;
+  text-shadow: 1px 1px black;
+  background: rgb(5, 51, 48);
+  background: linear-gradient(
+    320deg,
+    rgba(5, 51, 48, 1) 0%,
+    rgba(11, 159, 129, 0.9057233146067416) 26%,
+    rgba(3, 175, 210, 1) 82%
+  );
+}
+.book:checked {
   color: whitesmoke;
   text-shadow: 1px 1px black;
   background: rgb(5, 51, 48);

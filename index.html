@@ -14,13 +14,14 @@
   <body>
     <header>
       <h1>Library App</h1>
-      <h6>(with storage).</h6>
+      <h6>(..with storage).</h6>
     </header>
     <div class="nav">
       <nav>
         <p>Order By:</p>
         <form action="#" method="get" id="order" class="order">
           <select name="orderSelect" id="orderSelect">
+            <option value="bookName">Book name</option>
             <option value="dateAdded">Date added</option>
             <option value="datePublished">Book Published</option>
           </select>
@@ -31,15 +32,15 @@
             <ol>
               <li>
                 Total count:
-                <span class="booksCount">3</span>
+                <span class="booksCount"></span>
               </li>
               <li>
                 Read:
-                <span class="booksRead">1</span>
+                <span class="booksRead"></span>
               </li>
               <li>
                 Not Read:
-                <span class="booksNotRead">2</span>
+                <span class="booksNotRead"></span>
               </li>
             </ol>
           </div>
@@ -47,7 +48,7 @@
       </nav>
     </div>
     <div class="booksGrid">
-      <div class="book" >
+      <!-- <div class="book" >
         <header>
           <h4>Harry Potter</h4>
           <button class="close">
@@ -61,12 +62,8 @@
          <input type="checkbox" class="checker">
          <span class="slider round"></span></p>
         </label>
-      </div>
-      <div class="book ">2</div>
-      <div class="book">3</div>
-      <div class="book">4</div>
-      <div class="book">5</div>
-      <div class="book">6</div>
+      </div> -->
+
     </div>
     <button class="add">
       <img
@@ -82,12 +79,12 @@
       <div class="modalContent">
         <span class="closeModal">&times;</span>
         <form action="#" method="get">
-        <input type="text" name="bookName" id="bookName" placeholder="book name..." autocomplete="off">
+        <input type="text" name="bookName" id="bookName" placeholder="book name..." autocomplete="off" required>
         <label for="bookName" >Book name</label>
-        <input type="text" name="bookArtist" id="bookArtist" placeholder="artist's name..." autocomplete="off">
+        <input type="text" name="bookArtist" id="bookArtist" placeholder="artist's name..." required autocomplete="off">
         <label for="bookArtist">Artist</label>
         <input type="number" name="bookYear" id="bookYear" placeholder="year released..
-        ">
+        " required>
         <label for="year">Year released</label>
         <br>
         <input type="checkbox" name="haveRead" id="haveRead">
