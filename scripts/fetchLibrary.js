@@ -1,5 +1,5 @@
 import { bookLibrary } from "./store.js";
-import {} from "./toggleSwitch.js";
+import { flipTheSwitch } from "./toggleSwitch.js";
 import { bookLog } from "./log.js";
 import { deleteBook } from "./deleteBook.js";
 
@@ -22,13 +22,16 @@ function getBooks() {
         <p>Released in ${book.year}</p>
         <p>Have read it?
         <label class="switch" id="s">
-         <input type="checkbox" class="checker" ${book.read ? "checked" : ""}>
+         <input type="checkbox" class="checker" ${
+           book.read ? "checked" : ""
+         } data-key="${bookLibrary.indexOf(book)}">
          <span class="slider round"></span></p>
         </label>
       </div>`)
   );
   bookLog();
   deleteBook();
+  flipTheSwitch();
 }
 
 export { getBooks };
