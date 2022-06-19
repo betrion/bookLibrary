@@ -1,6 +1,8 @@
 import { bookLibrary } from "./store.js";
 import {} from "./toggleSwitch.js";
 import { bookLog } from "./log.js";
+import { deleteBook } from "./deleteBook.js";
+
 const booksGrid = document.querySelector(".booksGrid");
 
 function getBooks() {
@@ -9,7 +11,7 @@ function getBooks() {
     (book) =>
       (booksGrid.innerHTML += `<div class="book ${
         book.read ? "readBook" : ""
-      }" >
+      }" data-key="${bookLibrary.indexOf(book)}">
         <header>
           <h4>${book.name}</h4>
           <button class="deleteBook">
@@ -26,6 +28,7 @@ function getBooks() {
       </div>`)
   );
   bookLog();
+  deleteBook();
 }
 
 export { getBooks };
