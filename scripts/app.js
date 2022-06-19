@@ -32,7 +32,6 @@ const submitButton = document
       e.target.form.bookYear.value = "";
       e.target.form.haveRead.checked = false;
       book.addBookToLibrary();
-      console.log(bookLibrary);
       getBooks();
     }
   });
@@ -40,7 +39,6 @@ const submitButton = document
 function sortBooks(sortOrder) {
   if (sortOrder === "dateAdded") {
     bookLibrary.sort(function (a, b) {
-      console.log(bookLibrary);
       return a.added - b.added;
     });
   } else if (sortOrder === "datePublished") {
