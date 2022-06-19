@@ -78,5 +78,11 @@ let exampleBook2 = new Book(
   2001,
   false
 ).addBookToLibrary();
+let exampleBook3 = new Book(
+  "The Hobbit",
+  "J.R.R Tolkien",
+  1937,
+  true
+).addBookToLibrary();
 
 getBooks();
