@@ -65,11 +65,11 @@
       <div class="modalContent">
         <span class="closeModal">&times;</span>
         <form action="#" method="get">
-        <input type="text" name="bookName" id="bookName" placeholder="book name..." autocomplete="off" required>
-        <label for="bookName" >Book name</label>
-        <input type="text" name="bookArtist" id="bookArtist" placeholder="artist's name..." required autocomplete="off">
+        <input type="text" name="bookName" id="bookName" placeholder="book name..." autocomplete="off" required maxlength="20">
+        <label for="bookName">Book name</label>
+        <input type="text" name="bookArtist" id="bookArtist" placeholder="artist's name..." maxlength="20" required  autocomplete="off">
         <label for="bookArtist">Artist</label>
-        <input type="number" name="bookYear" id="bookYear" placeholder="year released..
+        <input type="number" name="bookYear" maxlength="4" id="bookYear" placeholder="year released..
         " required>
         <label for="year">Year released</label>
         <br>
